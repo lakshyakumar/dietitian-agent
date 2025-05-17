@@ -67,6 +67,10 @@ This project is a FastAPI-based backend for handling chat queries, along with a 
 2. Run the FastAPI application:
    ```
    python main.py
+   ```  
+   or  
+   ```
+   uvicron main:app --reload
    ```
 3. The backend will be available at `http://localhost:8000`.
 

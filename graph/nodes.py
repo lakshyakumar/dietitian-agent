@@ -33,6 +33,7 @@ def init_node(state: DietitianState):
 def chat_node(state: DietitianState):
     print("Chat node...")
     result = query_selector_agent.run_sync(state["query"], deps=DietitianDependency( sentiment=state["sentiment"], summary=state["summary"]))
+    # print("summary generated: ", result.output.summary)
     return { "messages": [AIMessage(content=result.output.answer)], "summary": result.output.summary, "sentiment": result.output.sentiment }
 
 def updation_node(state: DietitianState):
